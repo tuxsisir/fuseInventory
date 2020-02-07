@@ -19,7 +19,7 @@ public class InventoryModel extends AuditModel {
             sequenceName = "inventory_sequence",
             initialValue = 1000
     )
-    private Long id;
+    private Long inventory_id;
 
     // columns 
 
@@ -44,12 +44,12 @@ public class InventoryModel extends AuditModel {
     // - columns
 
     // getter setters
-    public Long getId() {
-        return id;
+    public Long getInventoryId() {
+        return inventory_id;
     }
 
-    public void setId(final Long id) {
-        this.id = id;
+    public void setInventoryId(final Long inventoryId) {
+        this.inventory_id = inventoryId;
     }
 
     public String getName() {

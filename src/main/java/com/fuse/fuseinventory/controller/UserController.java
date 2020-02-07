@@ -17,7 +17,7 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping("/users")
-    public Page<UserModel> getQuestions(Pageable pageable) {
+    public Page<UserModel> getUsers(Pageable pageable) {
         return userRepository.findAll(pageable);
     }
 
@@ -28,7 +28,7 @@ public class UserController {
     }
 
     @PutMapping("/user/{userId}")
-    public UserModel updateQuestion(@PathVariable Long userId,
+    public UserModel updatUser(@PathVariable Long userId,
                                    @Valid @RequestBody UserModel userRequest) {
         return userRepository.findById(userId)
                 .map(user -> {
